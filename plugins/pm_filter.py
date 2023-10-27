@@ -1860,6 +1860,7 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
+                  )
     if offset != "":
         req = message.from_user.id if message.from_user else 0
         try:
