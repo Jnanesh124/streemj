@@ -78,8 +78,8 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/movies_hub_official1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/movies_hub_official1")]])
+         text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/ROCKERSBACKUP>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/ROCKERSBACKUP")]])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
@@ -128,28 +128,20 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
-        ])
+        )        
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
-        ])
+        )        
     try:
         if settings['max_btn']:
             if 0 < offset <= 10:
@@ -357,29 +349,21 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
-        ])
+        )        
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
-        ])
-
+        
     if offset != "":
         try:
             if settings['max_btn']:
@@ -540,24 +524,16 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
                 ),
             ]
             for file in files
-        ]
-        btn.insert(0, [
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
-            InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
-        ])
+        ]        
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
-        ])
+        )        
         
     offset = 0
 
@@ -636,7 +612,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʙᴇ Gʀᴏᴜᴘ Oᴡɴᴇʀ ᴏʀ ᴀɴ Aᴜᴛʜ Usᴇʀ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!", show_alert=True)
+            await query.answer("Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʙᴇ Gʀᴏᴜᴘ Oᴡɴᴇʀ ᴏʀ ᴀɴ ᴜᴛʜ Usᴇʀ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!", show_alert=True)
     elif query.data == "delallcancel":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -1174,7 +1150,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://movies_hub_official1")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://ROCKERSBACKUP")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1199,7 +1175,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://telegram.me/movies_hub_official1")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://telegram.me/ROCKERSBACKUP")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1261,15 +1237,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🛡 Fast Download", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('▶ Watch online', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 download", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('😎 Watch online', url=lazy_stream)]])  # web stream Link
             )
             await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🛡 Fast Download", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('▶ Watch online', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Download", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('😎 Watch online', url=lazy_stream)]])  # web stream Link
             )
         except Exception as e:
             print(e)  # print the error message
@@ -1288,18 +1264,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('🦋 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🦋', url=CHNL_LNK),
-                    InlineKeyboardButton('✨ Mᴏᴠɪᴇ Gʀᴏᴜᴘ ✨', url="https://t.me/movies_hub_official1")
-                ],[
-                    InlineKeyboardButton('♛ 𝐉𝐎𝐈𝐍 𝐀𝐃 𝐅𝐑𝐄𝐄 𝐆𝐑𝐎𝐔𝐏 ♛', callback_data='paid')
-                ],[
-                    InlineKeyboardButton('👻 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('👾 Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ 💰', callback_data="shortlink_info")
-                  ]]
+                    InlineKeyboardButton('😍 MAIN CHANNEL 😍', url=CHNL_LNK)
+                  ]]               
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1508,13 +1474,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="● ◌ ◌"
+            text="🚀 ◌ ◌"
         )
         await query.message.edit_text(
-            text="● ● ◌"
+            text="🚀 🚀 ◌"
         )
         await query.message.edit_text(
-            text="● ● ●"
+            text="🚀 🚀 🚀"
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1596,13 +1562,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="● ◌ ◌"
+            text="🚀 ◌ ◌"
         )
         await query.message.edit_text(
-            text="● ● ◌"
+            text="🚀 🚀 ◌"
         )
         await query.message.edit_text(
-            text="● ● ●"
+            text="🚀 🚀 🚀"
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1621,13 +1587,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="● ◌ ◌"
+            text="🚀 ◌ ◌"
         )
         await query.message.edit_text(
-            text="● ● ◌"
+            text="🚀 🚀 ◌"
         )
         await query.message.edit_text(
-            text="● ● ●"
+            text="🚀 🚀 🚀"
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1646,13 +1612,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="● ◌ ◌"
+            text="🚀 ◌ ◌"
         )
         await query.message.edit_text(
-            text="● ● ◌"
+            text="🚀 🚀 ◌"
         )
         await query.message.edit_text(
-            text="● ● ●"
+            text="🚀 🚀 🚀"
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1668,7 +1634,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "share":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KUSHALHK")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/ROCKERSBACKUP")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1684,7 +1650,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "song":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KUSHALHK")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/ROCKERSBACKUP")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1703,13 +1669,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="● ◌ ◌"
+            text="🚀 ◌ ◌"
         )
         await query.message.edit_text(
-            text="● ● ◌"
+            text="🚀 🚀 ◌"
         )
         await query.message.edit_text(
-            text="● ● ●"
+            text="🚀 🚀 🚀"
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1725,7 +1691,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sticker":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KUSHALHK")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/ROCKERSBACKUP")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1881,28 +1847,19 @@ async def auto_filter(client, msg, spoll=False):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
+                InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
+                InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
-        ])
+        )        
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
+                InlineKeyboardButton(" 📤 HOW TO OPEN", url=f"https://t.me/d68f97g97/54"),
+                InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
-        ])
     if offset != "":
         req = message.from_user.id if message.from_user else 0
         try:
@@ -1980,12 +1937,12 @@ async def auto_filter(client, msg, spoll=False):
             await m.delete()
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(300)
+                    await asyncio.sleep(60)
                     await hehe.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
+                await asyncio.sleep(60)
                 await hehe.delete()
                 await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
@@ -1995,13 +1952,13 @@ async def auto_filter(client, msg, spoll=False):
             await m.delete()
             try:
                if settings['auto_delete']:
-                    await asyncio.sleep(300)
+                    await asyncio.sleep(60)
                     m=await message.reply_text("🔎")
                     await hmm.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
+                await asyncio.sleep(60)
                 await hmm.delete()
                 await message.delete()
         except Exception as e:
@@ -2011,12 +1968,12 @@ async def auto_filter(client, msg, spoll=False):
             await m.delete()
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(300)
+                    await asyncio.sleep(60)
                     await fek.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
+                await asyncio.sleep(60)
                 await fek.delete()
                 await message.delete()
     else:
@@ -2024,12 +1981,12 @@ async def auto_filter(client, msg, spoll=False):
         await m.delete()
         try:
             if settings['auto_delete']:
-                await asyncio.sleep(300)
+                await asyncio.sleep(60)
                 await fuk.delete()
                 await message.delete()
         except KeyError:
             await save_group_settings(message.chat.id, 'auto_delete', True)
-            await asyncio.sleep(300)
+            await asyncio.sleep(60)
             await fuk.delete()
             await message.delete()
 
@@ -2098,14 +2055,14 @@ async def advantage_spell_chok(client, msg):
     )
     try:
         if settings['auto_delete']:
-            await asyncio.sleep(600)
+            await asyncio.sleep(60)
             await spell_check_del.delete()
     except KeyError:
             grpid = await active_connection(str(msg.from_user.id))
             await save_group_settings(grpid, 'auto_delete', True)
             settings = await get_settings(msg.chat.id)
             if settings['auto_delete']:
-                await asyncio.sleep(600)
+                await asyncio.sleep(60)
                 await spell_check_del.delete()
 
 
@@ -2150,14 +2107,14 @@ async def manual_filters(client, message, text=False):
                                 else:
                                     try:
                                         if settings['auto_delete']:
-                                            await asyncio.sleep(600)
+                                            await asyncio.sleep(60)
                                             await joelkb.delete()
                                     except KeyError:
                                         grpid = await active_connection(str(message.from_user.id))
                                         await save_group_settings(grpid, 'auto_delete', True)
                                         settings = await get_settings(message.chat.id)
                                         if settings['auto_delete']:
-                                            await asyncio.sleep(600)
+                                            await asyncio.sleep(60)
                                             await joelkb.delete()
                             except KeyError:
                                 grpid = await active_connection(str(message.from_user.id))
@@ -2191,14 +2148,14 @@ async def manual_filters(client, message, text=False):
                                 else:
                                     try:
                                         if settings['auto_delete']:
-                                            await asyncio.sleep(600)
+                                            await asyncio.sleep(60)
                                             await joelkb.delete()
                                     except KeyError:
                                         grpid = await active_connection(str(message.from_user.id))
                                         await save_group_settings(grpid, 'auto_delete', True)
                                         settings = await get_settings(message.chat.id)
                                         if settings['auto_delete']:
-                                            await asyncio.sleep(600)
+                                            await asyncio.sleep(60)
                                             await joelkb.delete()
                             except KeyError:
                                 grpid = await active_connection(str(message.from_user.id))
@@ -2230,14 +2187,14 @@ async def manual_filters(client, message, text=False):
                             else:
                                 try:
                                     if settings['auto_delete']:
-                                        await asyncio.sleep(600)
+                                        await asyncio.sleep(60)
                                         await joelkb.delete()
                                 except KeyError:
                                     grpid = await active_connection(str(message.from_user.id))
                                     await save_group_settings(grpid, 'auto_delete', True)
                                     settings = await get_settings(message.chat.id)
                                     if settings['auto_delete']:
-                                        await asyncio.sleep(600)
+                                        await asyncio.sleep(60)
                                         await joelkb.delete()
                         except KeyError:
                             grpid = await active_connection(str(message.from_user.id))
@@ -2269,14 +2226,14 @@ async def manual_filters(client, message, text=False):
                             else:
                                 try:
                                     if settings['auto_delete']:
-                                        await asyncio.sleep(600)
+                                        await asyncio.sleep(60)
                                         await joelkb.delete()
                                 except KeyError:
                                     grpid = await active_connection(str(message.from_user.id))
                                     await save_group_settings(grpid, 'auto_delete', True)
                                     settings = await get_settings(message.chat.id)
                                     if settings['auto_delete']:
-                                        await asyncio.sleep(600)
+                                        await asyncio.sleep(60)
                                         await joelkb.delete()
                         except KeyError:
                             grpid = await active_connection(str(message.from_user.id))
