@@ -449,7 +449,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
     ])
     # else:
-    #  btn.insert(0, [
+    btn.insert(0, [
                 InlineKeyboardButton("🔊ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("𝐇𝐨𝐰 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝", url=f"https://t.me/d68f97g97/54"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
