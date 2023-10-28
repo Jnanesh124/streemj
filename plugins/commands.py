@@ -321,17 +321,17 @@ async def start(client, message):
                 )
             )
             filesarr.append(msg)
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b> 🎟 : save this file it will delete in 5min</b>")
-        await asyncio.sleep(60)
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>🎟 : save this file it will delete in 5min</b>")
+        await asyncio.sleep(70)
         for x in filesarr:
             await x.delete()
-        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
+        await k.edit_text("<b>Your All Files/Videos is successfully deleted if u want type here 👇</b>")
         return    
         
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
-            await message.reply_text(text="<b>Please Search Again in Group</b>")
+            await message.reply_text(text="<b>Please Search Again in Group 🚀</b>")
         else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
@@ -344,13 +344,13 @@ async def start(client, message):
                         [
                             InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
                         ], [
-                            InlineKeyboardButton('💠 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 💠', url=await get_tutorial(chat_id))
+                            InlineKeyboardButton('🚀 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🚀', url=await get_tutorial(chat_id))
                         ]
                     ]
                 )
             )
-            await asyncio.sleep(1200)
-            await k.edit("<b>Your message is successfully deleted!!!</b>")
+            await asyncio.sleep(70)
+            await k.edit("<b>Your message is successfully deleted if u want type here 👇</b>")
             return
     user = message.from_user.id
     files_ = await get_file_details(file_id)           
@@ -374,10 +374,10 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                      InlineKeyboardButton('Request Gʀᴏᴜᴘ', url=f'https://t.me/+VJzhxoD6GD9kNmQ1'),
                       InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                    ],[
-                      InlineKeyboardButton("MY Owner", url="t.me/KUSHALHK")
+                      InlineKeyboardButton("MY Owner", url="t.me/alonekingjnanesh")
                      ]
                     ]
                 )
@@ -396,8 +396,8 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
-            await asyncio.sleep(600)
+            k await msg.reply("<b>🎟 : save this file it will delete in 5min</b>",quote=True)
+            await asyncio.sleep(70)
             await msg.delete()
             await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
             return
@@ -434,10 +434,10 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+              InlineKeyboardButton('Request Gʀᴏᴜᴘ', url=f'https://t.me/+VJzhxoD6GD9kNmQ1'),
               InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
            ],[
-              InlineKeyboardButton("MY Owner", url="t.me/KUSHALHK")
+              InlineKeyboardButton("MY Owner", url="t.me/alonekingjnanesh")
              ]
             ]
         )
@@ -445,8 +445,8 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
-    await asyncio.sleep(600)
+    k = await msg.reply("<b>🎟 : save this File it will delete in 5min</b>",quote=True)
+    await asyncio.sleep(60)
     await msg.delete()
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
     return   
@@ -952,7 +952,7 @@ async def shortlink(bot, message):
     try:
         command, shortlink_url, api = data.split(" ")
     except:
-        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink mplaylink.com 1f1da5c9df9a58058672ac8d8134e203b03426a1</code></b>")
+        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink shareus.io api</code></b>")
     reply = await message.reply_text("<b>Please Wait...</b>")
     shortlink_url = re.sub(r"https?://?", "", shortlink_url)
     shortlink_url = re.sub(r"[:/]", "", shortlink_url)
