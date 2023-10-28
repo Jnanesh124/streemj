@@ -396,9 +396,9 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
-            k await msg.reply("<b>🎟 : save this file it will delete in 5min</b>",quote=True)
-            await asyncio.sleep(70)
-            await msg.delete()
+            k = await msg.reply("<b>This Movie File/Video will be deleted in <u>10 mins</u> Save Messages and Start Download there</b>",quote=True)
+            await asyncio.sleep(60)
+            await msg.delete()            
             await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
             return
         except:
@@ -445,9 +445,9 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("<b>🎟 : save this File it will delete in 5min</b>",quote=True)
+    k = await msg.reply("<b>this File/Video will be deleted in <u>10 mins</u> forward this File/Video to your Saved Messages and Start Download there</b>",quote=True)
     await asyncio.sleep(60)
-    await msg.delete()
+    await msg.delete()    
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
     return   
 
