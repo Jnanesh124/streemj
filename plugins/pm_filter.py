@@ -2019,9 +2019,9 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>\n🚀 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄 ➢ {search} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐆𝐑𝐎𝐔𝐏 ➢ {message.chat.title} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐏𝐄𝐑𝐒𝐎𝐍 ➢ {message.from_user.mention}\n</b>"
+            cap = f"<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄 ➢ {search} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐆𝐑𝐎𝐔𝐏 ➢ {message.chat.title} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐏𝐄𝐑𝐒𝐎𝐍 ➢ {message.from_user.mention}\n⏱️ Result Shown in: {remaining_seconds} <i>seconds</i>🚀</b>"
         else:               
-            cap = f"<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄 ➢ {search} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐆𝐑𝐎𝐔𝐏 ➢ {message.chat.title} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐏𝐄𝐑𝐒𝐎𝐍 ➢ {message.from_user.mention}\n</b>" 
+            cap = f"<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄 ➢ {search} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐆𝐑𝐎𝐔𝐏 ➢ {message.chat.title} </b>\n<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐏𝐄𝐑𝐒𝐎𝐍 ➢ {message.from_user.mention}\n⏱️ Result Shown in: {remaining_seconds} <i>seconds</i>🚀</b>" 
             for file in files:            
                 cap += f"<b>🚀 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
         
@@ -2032,13 +2032,11 @@ async def auto_filter(client, msg, spoll=False):
             try:
                 if settings['auto_delete']:
                     await asyncio.sleep(60)
-                    await hehe.delete()
-                    await message.delete()
+                    await hehe.delete()      
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
                 await asyncio.sleep(60)
-                await hehe.delete()
-                await message.delete()
+                await hehe.delete()         
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg") 
@@ -2048,13 +2046,11 @@ async def auto_filter(client, msg, spoll=False):
                if settings['auto_delete']:
                     await asyncio.sleep(60)
                     m=await message.reply_text("🚀")
-                    await hmm.delete()
-                    await message.delete()
+                    await hmm.delete()        
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
                 await asyncio.sleep(60)
-                await hmm.delete()
-                await message.delete()
+                await hmm.delete()        
         except Exception as e:
             logger.exception(e)
             m=await message.reply_text("🚀") 
@@ -2063,26 +2059,22 @@ async def auto_filter(client, msg, spoll=False):
             try:
                 if settings['auto_delete']:
                     await asyncio.sleep(60)
-                    await fek.delete()
-                    await message.delete()
+                    await fek.delete()            
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
                 await asyncio.sleep(60)
-                await fek.delete()
-                await message.delete()
+                await fek.delete()                
     else:
         fuk = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
         await m.delete()
         try:
             if settings['auto_delete']:
                 await asyncio.sleep(60)
-                await fuk.delete()
-                await message.delete()
+                await fuk.delete()        
         except KeyError:
             await save_group_settings(message.chat.id, 'auto_delete', True)
             await asyncio.sleep(60)
-            await fuk.delete()
-            await message.delete()
+            await fuk.delete()          
     # if spoll:
     #     await msg.message.delete()
 
