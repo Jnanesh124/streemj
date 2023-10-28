@@ -1234,13 +1234,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 OTT RELEASED MOVIES JOIN 🚀", url=f'https://t.me/+D7L-rX9lKA43MGRl')]]
-            )
+            ) )
             await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 OTT RELEASED MOVIES JOIN 🚀", url=f'https://t.me/+D7L-rX9lKA43MGRl')]]
-            )
+            ))
         except Exception as e:
             print(e)  # print the error message
             await query.answer(f"something went wrong sweetheart\n\n{e}", show_alert=True)
