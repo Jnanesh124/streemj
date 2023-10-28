@@ -69,12 +69,12 @@ async def start(client, message):
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
+                btn.append([InlineKeyboardButton(f'↻ Tʀʏ Aɢᴀɪɴ', 'select')])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(f'↻ Tʀʏ Aɢᴀɪɴ', 'select')])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**🚀 JOIN BELOW CHANNEL AND RETURN TO UR MOVIE REQUEST PREVIEWS GROUP ASK AGAIN 🚀**",
+            text="**👇join below channel and ask again ur movies in previous group👇**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
