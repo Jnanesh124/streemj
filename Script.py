@@ -223,8 +223,9 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
     CAPTION = """ 
 <b>
-📤 {file_name}
+🗂 {file_name}
 </b>"""
+    
     IMDB_TEMPLATE_TXT = """
 <b>Query: {qurey}
 
