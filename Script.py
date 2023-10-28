@@ -264,11 +264,7 @@ Any Doubts or Not Connecting? Contact Me </b>
 ɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ"""
 
     SELECT = """
-MOVIES ➢ Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs"
-
-SERIES ➢ Sᴇʟᴇᴄᴛ "Sᴇᴀsᴏɴs"
-
-Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛᴏɴ ᴀɴᴅ Cʟɪᴄᴋ "Sᴇɴᴅ Aʟʟ" Tᴏ ɢᴇᴛ Aʟʟ Fɪʟᴇ Lɪɴᴋs ɪɴ ᴀ Sɪɴɢʟᴇ ᴄʟɪᴄᴋ"""
+go back To Ur Group And Type Again U get File📁"""
 
     SINFO = """
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
@@ -291,13 +287,9 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """ 
-<b>══════════════════
+<b>
 🗂 {file_name}
-═══════════════════ 
-𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄 𝐇𝐄𝐑𝐄 👇
-╔══════════════════╗         
-    <a href="https://t.me/TG_LINKS_CHANNEL">🔱 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🔱</a>
-╚══════════════════╝</b>"""
+</b>"""
     
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
